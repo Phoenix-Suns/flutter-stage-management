@@ -48,6 +48,12 @@ class _MovieListPageState extends State<MovieListPage> {
 
                 ),
               ),
+              ElevatedButton(
+                child: Text('Search'),
+                onPressed: () {
+                  vm.fetchMovies(_controller.text);
+                },
+              ),
               Expanded(
                   child: MovieListWidget(movies: vm.movies))
             ])
